@@ -1,6 +1,6 @@
-saludo = "Hola mundo este es mi primer paso en python"
+
+numeroString = "325000";
 entero = 24;
-numeroString = "2024";
 
 #ME DICE EL TIPO DE DATO
 print(type(entero));
