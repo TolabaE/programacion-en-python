@@ -1,7 +1,2 @@
-
-import math.ejercicio1;
-
-
-
-# print(result);
+print("Hola mundo")
 

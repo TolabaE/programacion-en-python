@@ -1,17 +1,9 @@
-#CALCULAR EDAD
-# se asigna el valor a una variable de tipo entero, donde recibe como valor el año de nacimiento, luego calcula su edad.
-# ESTRUCTURA DE CONTROL SECUENCIAL.
+#SUMA DE DOS NUMEROS.
+#Escribir un programa que pida al usuario dos números y muestren pantalla la suma de ambos.
+#ESTO ES UNA ESTRUCTURA DE CONTROL SECUENCIAL CON FUNCIONES.
 
-import datetime ;
-
-fechaActual = datetime.datetime.now().year
-
-valor = input("ingrese el año de su nacimiento: ")
-
-def calcularEdad(fechaNac): 
-    edad = fechaActual - int(fechaNac);
-    return edad
-
-edad = calcularEdad(valor)
-respuesta = "su edad actual es de: " + str(edad) + " años"
-print(respuesta)
+def sumarNumeros():
+    primerValor = input("Ingrese el primer valor que desea sumar: ")
+    segundoValor = input("Ingrese el segundo valor que va a sumar al primer: ")
+    resultado = int(primerValor) + int(segundoValor)
+    return print("el resultado de la suma es: "+ str(resultado))
