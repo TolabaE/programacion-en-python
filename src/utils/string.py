@@ -8,3 +8,7 @@ estar desclarando texto abajo de otro"""
 saludo = "Hola mundo este es mi primer paso en python"
 
 numeroString = "2024";
+
+#para recortar palabras de una cadena de texto
+primera_palabra = saludo[0:4]
+print(primera_palabra)
