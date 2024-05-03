@@ -36,3 +36,13 @@ print(texto.lower())#pasa todo a minuscula
 print(texto.capitalize())#convierte la primera letra en mayuscula
 print(texto.title())#convierte todas las primeras palabras en mayuscula
 print(texto.strip())#elimina todos los espacios de la izquierda a la derecha
+print(texto.find("camino"))#busca ela palabras que le pasen por parametro, y retorna la posicion
+print(texto.replace("vida","comida"))#reemplaza el texto que le pasemos por otro.
+print("la" in texto)#retorna true o false si se encuentra la palabra que estamos buscando.
+print("caballo" not in texto)#lo mismo pero a la inversa.
+
+# SECUENCIAS DE ESCAPE
+
+comillas_doble = 'escribir en la consola "Hola mundo" para imprimir por pantalla'
+
+otra_forma = "escribir en la consola \"HOLA DEV\" para imprimir en pantalla"
