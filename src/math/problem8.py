@@ -1,4 +1,5 @@
 # ESCRIBIR UN ALGORITMO QUE CALCULE LA RAÍZ CUADRADA DE UN NÚMERO INGRESADO POR EL USUARIO.
+# ES UNA ESTRUCTURA DE CONTROL SECUENCIAL DE TIPO FUNCIONAL
 
 def calculoRaizCuadrada():
     numero = int(input("ingrese un numero que desea calcular su raiz cuadrada: "))
