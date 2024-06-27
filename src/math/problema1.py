@@ -7,3 +7,5 @@ def sumarNumeros():
     segundoValor = input("Ingrese el segundo valor que va a sumar al primer: ")
     resultado = int(primerValor) + int(segundoValor)
     return print("el resultado de la suma es: "+ str(resultado))
+
+sumarNumeros()

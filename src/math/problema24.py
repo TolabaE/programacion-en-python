@@ -3,6 +3,7 @@
 
 mensaje = "el consumo total de la luz es de: $"
 
+consumoWatts = int(input("Ingrese la cantidad de kw consumidos durante el mes: "))
 
 def calculoFacturaLuz(consumoLuz):
     total = 0
@@ -24,3 +25,5 @@ def calculoFacturaLuz(consumoLuz):
     elif(consumoLuz <= 30):
         total = consumoLuz * 6.03
         print(mensaje+str(total))
+
+calculoFacturaLuz(consumoWatts)
