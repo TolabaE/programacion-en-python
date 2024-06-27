@@ -16,3 +16,5 @@ def calculoDistancia():
 
     distancia = math.sqrt(pow(X2-X1,2) + pow(Y2-Y1,2)) #la funcion pow() nos permite elevar la potenica de cualquier numero, y el metodo sqrt()calcula la raiz cuadrada.
     print("la distancia desde el punto A y el punto B es igual a: ",distancia)
+
+calculoDistancia()

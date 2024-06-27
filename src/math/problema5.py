@@ -8,3 +8,5 @@ def calcularPromedio():
     tercera_nota = float(input("Ingrese el valor de la tercera nota: "))
     promedio = primera_nota + segunda_nota + tercera_nota/3
     print("El promedio total de su nota es de: ",promedio)
+
+calcularPromedio()

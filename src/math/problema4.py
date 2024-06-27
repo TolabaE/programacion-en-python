@@ -7,3 +7,5 @@ def areaTriangulo():
     altura = float(input("Ahora ingrese la altura del triangulo en cm: "))
     areaTriangulo = (base * altura)/2
     print("la area total del triangulo es de: ",areaTriangulo,"cm2")
+
+areaTriangulo()

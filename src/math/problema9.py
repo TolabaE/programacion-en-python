@@ -6,3 +6,5 @@ def calcularRadio():
     pi = 3.12
     areaCirculo = pi * (radio**2)
     print("el area del circulo es de: ",areaCirculo,"cm2")
+
+calcularRadio()
