@@ -2,12 +2,11 @@
 
 def calculoSegundos(hs,minuto,seg):
     totalSeg = seg
-    totalMinSeg = (minuto * 60)
-    totalHsSeg = (hs * 3600)
-    return [totalMinSeg,totalHsSeg,totalSeg]
+    totalMinSeg = minuto * 60
+    totalHsSeg = hs * 3600
+    return [totalHsSeg,totalMinSeg,totalSeg]
 
-sumaTotal = sum(calculoSegundos(3,30,50))
-
+sumaTotal = sum(calculoSegundos(1,20,30)) #sumo todo los segundos de la lista con el metodo sum(). 
 
 print("el valor de name en practica1 es ",__name__)
 
