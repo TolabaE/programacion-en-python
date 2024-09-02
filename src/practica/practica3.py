@@ -1,12 +1,9 @@
 # Escribir una función que reciba una muestra de números en una lista y retorne su media.
 
-num_list = [6,6,10,15,30,100]
+num_list = [4,4,6,10,15,20,40,80,10,99]
 
 def calculoMedia(list):
-    total = 0
-    for num in list:
-        total += num
-    promedio = total // len(list)
+    promedio = sum(num_list) / len(list)
     print("el promedio de los numeros ingresados es "+str(promedio))
 
 calculoMedia(num_list)

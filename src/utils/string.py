@@ -47,9 +47,9 @@ comillas_doble = 'escribir en la consola "Hola mundo" para imprimir por pantalla
 
 otra_forma = "escribir en la consola \"HOLA DEV\" para imprimir en pantalla"
 
-    # paso los intervalos que estan en un lista a numeros
-    lista_num = []
-    for num in intervalo1:
-        lista_num.append(int(num))
-    for num in intervalo2:
-        lista_num.append(int(num))
+    # # paso los intervalos que estan en un lista a numeros
+    # lista_num = []
+    # for num in intervalo1:
+    #     lista_num.append(int(num))
+    # for num in intervalo2:
+    #     lista_num.append(int(num))
