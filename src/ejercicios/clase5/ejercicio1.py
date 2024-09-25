@@ -20,10 +20,11 @@ class Password:
         if(self.__contraseña == ''):
             print('No se genero ninguna contraseña, use el metodo generarPasword()')
 
+        claveFuerte = False
+        caracteres = "<=>@#%&+"
         mayuscula = 0
         minuscula = 0
         numero = 0
-        caracteres = "<=>@#%&+"
         caracter = 0
 
         for palabra in self.__contraseña:
@@ -38,12 +39,9 @@ class Password:
                 if(palabra == index):
                     caracter +=1
 
-        if(caracter != 0 and mayuscula != 0 and minuscula != 0 and numero != 0 ):
-            return True
-        
-        print('la contraseña generada es :',self.__contraseña)
-
-
+        if(caracter != 0 and mayuscula > 1 and minuscula > 1 and numero > 1 ):
+            claveFuerte = True
+            return claveFuerte
     
     # genera la contraseña del objeto cuyo valor de tipo string tendrá una longitud igual al valor del atributo de instancia “longitud”.
     # Para la generación de la clave puede usar los métodos random.choice() y string.join() de Python.
@@ -55,9 +53,13 @@ class Password:
 
 
     # Incluir métodos públicos que permitan obtener y asignar valores (getters y setters) a los atributos de instancia privados.
+    
 
-    # Sobreescribir el método de instancia __str__(), para que retorne la clave generada y el valor booleano que devuelve el método “es_fuerte()”.<
 
+    # Sobreescribir el método de instancia __str__(), para que retorne la clave generada y el valor booleano que devuelve el método “es_fuerte()”.
+    def __str__(self) -> str:
+        value = self.esFuerte()
+        return f"la clave generada es: {self.__contraseña} y es fuerte: {value} "
 
 
 
@@ -68,6 +70,6 @@ class Password:
 
 
 login = Password(12)
-
 login.generarPassword()
-login.esFuerte()
+
+print(login)
