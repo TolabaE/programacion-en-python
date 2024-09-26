@@ -40,6 +40,8 @@ class Password:
         if(caracter != 0 and mayuscula > 1 and minuscula > 1 and numero > 1 ):
             claveFuerte = True
             return claveFuerte
+        else:
+            return claveFuerte
     
     # genera la contraseña del objeto cuyo valor de tipo string tendrá una longitud igual al valor del atributo de instancia “longitud”.
     # Para la generación de la clave puede usar los métodos random.choice() y string.join() de Python.
@@ -85,23 +87,32 @@ class Password:
 # • Crear una lista de objetos de tipo Password.
 # • Crear instancias de Password y agregarlas a la lista. Para cada objeto, se debe ingresar la
 # longitud de la clave por teclado. Si el valor ingresado es cero, no se pasará ningún valor como argumento al método inicializador.
+password1 = Password(11)
+password2 = Password(4)
+password3 = Password(15)
+password4 = Password(0)
+password5 = Password(8)
+password6 = Password(6)
+
+
+passwordList = [password1, password2, password3, password4, password5, password6]
+
 # • Mostrar cada una de las contraseñas creadas y si es o no fuerte (usar un bucle). Para ello,
 # usar este simple formato:
 # contraseña1 - valor_booleano1
 # contraseña2 - valor_bololeano2
 
+for obj in passwordList:
+    obj.generarPassword()
+    value = obj.esFuerte()
+    print(obj.contraseña,f"- {value}")
 
 
-
-
-
-
-
-login = Password(12)
+# login = Password(12)
 # login.generarPassword()
 
 # print(login.obtenerContraseña)
 # login.longuitud = 20
 # print(login.longuitud)
 
-print(login.contraseña)
+# print(login.contraseña)
