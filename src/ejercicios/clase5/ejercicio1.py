@@ -1,8 +1,6 @@
 # Crear una clase llamada Password con las siguientes condiciones:
 import random
 
-
-
 class Password:
     # atributo de clase privadas
     __LONGITUD = 8
@@ -17,7 +15,7 @@ class Password:
 
     # devuelve un booleano si es fuerte o no. Para que sea fuerte debe tener más de 1 mayúscula, 1 carácter especial, más de 1 minúscula y más de 1 números.
     def esFuerte(self):
-        if(self.__contraseña == ''):
+        if(self.__contraseña == ""):
             print('No se genero ninguna contraseña, use el metodo generarPasword()')
 
         claveFuerte = False
@@ -53,7 +51,28 @@ class Password:
 
 
     # Incluir métodos públicos que permitan obtener y asignar valores (getters y setters) a los atributos de instancia privados.
+    # metodos publicos getter para obtener los valores del atributo privado contraseña
+    @property
+    def contraseña(self):
+        return self.__contraseña
+
+    # metodos publicos getter para obtener los valores del atributo privado longuitud
+    @property
+    def longuitud(self):
+        return self.__longitud
     
+    # metodos publicos setter para asignar valores a los atributos de instancia privados
+    @contraseña.setter
+    def contraseña(self,new_password):
+        self.__contraseña = str(new_password)
+        return self.__contraseña
+
+    @longuitud.setter
+    def longuitud(self,new_long):
+        if(6 >= new_long <= 15):
+            self.__longitud = new_long
+        else:
+            print("la longuitud de la contraseña no es la requerida,se asignara el valor por defecto")
 
 
     # Sobreescribir el método de instancia __str__(), para que retorne la clave generada y el valor booleano que devuelve el método “es_fuerte()”.
@@ -61,6 +80,15 @@ class Password:
         value = self.esFuerte()
         return f"la clave generada es: {self.__contraseña} y es fuerte: {value} "
 
+
+# Luego, agregar sentencias de código Python que permitan:
+# • Crear una lista de objetos de tipo Password.
+# • Crear instancias de Password y agregarlas a la lista. Para cada objeto, se debe ingresar la
+# longitud de la clave por teclado. Si el valor ingresado es cero, no se pasará ningún valor como argumento al método inicializador.
+# • Mostrar cada una de las contraseñas creadas y si es o no fuerte (usar un bucle). Para ello,
+# usar este simple formato:
+# contraseña1 - valor_booleano1
+# contraseña2 - valor_bololeano2
 
 
 
@@ -70,6 +98,10 @@ class Password:
 
 
 login = Password(12)
-login.generarPassword()
+# login.generarPassword()
 
-print(login)
+# print(login.obtenerContraseña)
+# login.longuitud = 20
+# print(login.longuitud)
+
+print(login.contraseña)
