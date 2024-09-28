@@ -20,10 +20,7 @@ class Password:
 
         claveFuerte = False
         caracteres = "<=>@#%&+"
-        mayuscula = 0
-        minuscula = 0
-        numero = 0
-        caracter = 0
+        mayuscula = minuscula = numero = caracter = 0
 
         for palabra in self.__contraseña:
             if(palabra.isupper()):
@@ -89,10 +86,11 @@ class Password:
 
 
 def main():
+    cantidad = int(input("ingrese la cantidad de password que desea agregar a la lista: "))
     passwordList = []
 
-    for i in range(5):
-        long = int(input("ingrese la longuitud para generar una contraseña: "))
+    for i in range(cantidad):
+        long = int(input("ingrese la cantidad de digitos que va a tener su contraseña: "))
         objetoPassword = Password(long)
         passwordList.append(objetoPassword)
 

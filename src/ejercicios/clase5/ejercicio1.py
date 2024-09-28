@@ -20,10 +20,7 @@ class Password:
 
         claveFuerte = False
         caracteres = "<=>@#%&+"
-        mayuscula = 0
-        minuscula = 0
-        numero = 0
-        caracter = 0
+        mayuscula = minuscula = numero = caracter = 0
 
         for palabra in self.__contraseña:
             if(palabra.isupper()):
