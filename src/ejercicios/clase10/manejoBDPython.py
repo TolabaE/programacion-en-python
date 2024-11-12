@@ -35,8 +35,7 @@ class ManejoBaseDatos:
     
     def seleccionarRegistro(self,dni:int):
         # self.realizarConexionBD()
-        self.__cursor.execute(f"SELECT * FROM {self.name_conexion} WHERE dni=?",(dni,))
-        usuario = self.__cursor.fetchone()
+        usuario = self.__cursor.execute(f"SELECT * FROM {self.name_conexion} WHERE dni=?",(dni,)).fetchone()
         if (usuario):
             print(usuario)  
         else:
@@ -70,6 +69,10 @@ class ManejoBaseDatos:
         self.__cursor.execute(f"DELETE FROM {self.name_conexion} WHERE nro_legajo=?",(legajo,))
         self.__bd_conection.commit()
 
+    def finalizarOperaciones(self):
+        self.__bd_conection.close()
+        print("base de datos desconectada")
+
 def main(nombre_base):
     empleados = ManejoBaseDatos(nombre_base)
     empleados.realizarConexionBD()
@@ -84,28 +87,20 @@ def main(nombre_base):
     if(valor == 1):
         nuevo_registro = input("ingrese el nuevo empleado separado por una coma y respetando el orden (legajo / dni/ nombre / apellido / area): ").split(",")
         empleados.insertarRegistro(nuevo_registro)
+    elif(valor == 2):
+        dni_consulta = input("ingrese el dni del empleado que desea consultar: ")
+        empleados.seleccionarRegistro(dni_consulta)
+    elif(valor == 3):
+        empleados.seleccionarTodosRegistros()
+    elif(valor == 4):
+        nro_legajo = input("ingrese el nro de legajo del empleado: ")
+        area_modificar = input("ahora ingrese la nueva area que desea asignarla: ")
+        empleados.modificarEmpleado(nro_legajo,area_modificar)
+    elif(valor == 5):
+        nro_eliminar = input("ingrese el numero de legajo que desea eliminar: ")
+        empleados.eliminarEmpleados(nro_eliminar)
+    else:
+        empleados.finalizarOperaciones()
 
 
 main("empleados")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# empleados.crearTabla()
-# empleados.insertarRegistro(120240,2212991,"Florencia","Perichon","auxiliar digital")
-# empleados.insertarRegistro(191892,4225166,"leandro","amaya","armador digital")
-# empleados.seleccionarRegistro(4212991)    
-
-# empleados.seleccionarTodosRegistros()
-# empleados.modificarEmpleado(192779,"almagro")
-# empleados.eliminarEmpleados(192448)
